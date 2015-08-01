@@ -5,7 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint --ext .js --ext .jsx .",
-    "test": "npm run lint",
+    "test": "npm run lint && karma start",
+    "tdd": "karma start --auto-watch --no-single-run",
     "build": "webpack --config webpack.config.js --bail -p",
     "dev": "open http://localhost:8080 && webpack-dev-server --history-api-fallback --hot --inline --progress",
     "patch": "release patch",
@@ -48,5 +49,8 @@
     "webpack": "^1.10.5",
     "webpack-dev-server": "^1.10.1",
     "yargs": "^3.16.1"
+  },
+  "dependencies": {
+    "normalize": "^0.3.1"
   }
 }
