@@ -4,12 +4,17 @@ var yargs = require('yargs')
 
 var options = yargs
   .alias('p', 'production')
-  .alias('d', 'debug')
   .argv
 
 var jsLoader = 'babel?cacheDirectory'
 
 var baseConfig = {
+  /**
+   * Entry
+   * Reference: http://webpack.github.io/docs/configuration.html#entry
+   * Should be an empty object if it's generating a test build
+   * Karma will set this when it's a test build
+   */
   entry: undefined,
 
   output: undefined,

@@ -6,10 +6,8 @@
   "scripts": {
     "lint": "eslint --ext .js --ext .jsx .",
     "test": "npm run lint",
-    "clean": "rm -rf public && mkdir public",
-    "html": "npm run clean && cp src/*.html public/",
-    "build": "npm run html && webpack --config webpack.config.js --bail -p",
-    "dev": "npm run html && open http://localhost:8080 && webpack-dev-server --history-api-fallback --hot --inline --progress",
+    "build": "webpack --config webpack.config.js --bail -p",
+    "dev": "open http://localhost:8080 && webpack-dev-server --history-api-fallback --hot --inline --progress",
     "patch": "release patch",
     "minor": "release minor",
     "major": "release major"
@@ -42,7 +40,10 @@
     "eslint-plugin-react": "^3.1.0",
     "eslint-plugin-standard": "^1.1.0",
     "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.0",
     "mt-changelog": "^0.6.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.8",
     "release-script": "^0.2.1",
     "webpack": "^1.10.5",
     "webpack-dev-server": "^1.10.1",
