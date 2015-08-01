@@ -1,9 +1,9 @@
-import React, { addons } from 'react/addons'
-import expect from 'expect.js'
+import React from 'react'
+import TestUtils from 'react/lib/ReactTestUtils'
+
 import FirstComponent from './FirstComponent'
 
-const { describe, it } = global
-const { TestUtils } = addons
+const { describe, it, expect } = global
 
 describe('Component: FirstComponent', () => {
   it('has first-component class', () => {
