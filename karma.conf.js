@@ -24,7 +24,7 @@ module.exports = function karmaConfig (config) {
       'node_modules/es5-shim/es5-shim.js',
 
       // Grab all files in the src folder that contain .test.
-      'app/**/*.test.*'
+      'src/**/*.test.*'
     ],
 
     preprocessors: {
