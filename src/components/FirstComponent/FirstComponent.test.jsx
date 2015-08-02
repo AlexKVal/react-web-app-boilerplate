@@ -3,8 +3,6 @@ import TestUtils from 'react/lib/ReactTestUtils'
 
 import FirstComponent from './FirstComponent'
 
-const { describe, it, expect } = global
-
 describe('Component: FirstComponent', () => {
   it('has first-component class', () => {
     const firstComponent = TestUtils.renderIntoDocument(<FirstComponent/>)

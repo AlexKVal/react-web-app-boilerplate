@@ -14,4 +14,12 @@ baseConfig.module.preLoaders.push({
   loader: 'isparta-instrumenter'
 })
 
+baseConfig.module.loaders.push({
+  // Skip loading css in test mode
+  // Reference: https://github.com/webpack/null-loader
+  test: /\.css$/, loader: 'null'
+})
+
+baseConfig.devtool = 'inline-source-map'
+
 module.exports = baseConfig

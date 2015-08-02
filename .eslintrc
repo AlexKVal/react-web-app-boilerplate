@@ -5,6 +5,14 @@
     "react",
     "standard"
   ],
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "assert": true,
+    "expect": true,
+    "sinon": true
+  },
   "rules": {
     "standard/object-curly-even-spacing": [2, "either"],
     "standard/array-bracket-even-spacing": [2, "either"],
