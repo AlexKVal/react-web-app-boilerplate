@@ -48,6 +48,12 @@ var cssLoader = {
 // Add cssLoader to the loader list
 baseConfig.module.loaders.push(cssLoader)
 
+baseConfig.plugins.push(
+  // Reference: https://github.com/webpack/extract-text-webpack-plugin
+  // Extract css files
+  new ExtractTextPlugin('[name].[hash].css')
+)
+
 /**
  * PostCSS
  * Reference: https://github.com/postcss/autoprefixer-core
@@ -70,13 +76,7 @@ baseConfig.plugins.push(
   })
 )
 
-if (options.production) {
-  baseConfig.plugins.push(
-    // Reference: https://github.com/webpack/extract-text-webpack-plugin
-    // Extract css files
-    new ExtractTextPlugin('[name].[hash].css')
-  )
-} else {
+if (!options.production) {
   baseConfig.plugins.push(
     // Reference: http://webpack.github.io/docs/list-of-plugins.html#noerrorsplugin
     // Only emit files when there are no errors
