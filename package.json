@@ -9,9 +9,7 @@
     "tdd": "karma start --auto-watch --no-single-run",
     "build": "webpack --config webpack.config.js --bail -p",
     "dev": "open http://localhost:8080 && webpack-dev-server --history-api-fallback --hot --inline --progress",
-    "patch": "release patch",
-    "minor": "release minor",
-    "major": "release major"
+    "release": "release"
   },
   "repository": {
     "type": "git",
