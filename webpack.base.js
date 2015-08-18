@@ -1,4 +1,4 @@
-/* eslint no-var: 0 */
+/* eslint no-var: 0, babel/object-shorthand: 0 */
 var webpack = require('webpack')
 var yargs = require('yargs')
 
